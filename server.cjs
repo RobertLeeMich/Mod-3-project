@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const gamesRoutes = require('./routes/api/games.cjs')
 
 const app = express();
 
@@ -14,6 +15,9 @@ require('./config/database.cjs')
 app.use(logger('dev'));
 // middleware to parse incoming JSON data
 app.use(express.json());
+//middleware to pull game routes
+app.use('/api/games', gamesRoutes)
+
 
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder

@@ -1,33 +1,34 @@
-import './App.css'
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import NewOrderPage from '../NewOrderPage/NewOrderPage.jsx'
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage'
-import AuthPage from '../AuthPage/AuthPage'
-import Navbar from '../../components/Navbar/Navbar'
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import NewOrderPage from '../../pages/NewOrderPage/NewOrderPage';
+import OrderHistoryPage from '../../pages/OrderHistoryPage/OrderHistoryPage';
+import AuthPage from '../../pages/AuthPage/AuthPage';
+import GameListPage from '../../pages/GameListPage/GameListPage'
+import CartPage from '../../pages/CartPage/CartPage';
 import { getUser } from '../../utilities/users-service'
 
-
 function App() {
-  const [user, setUser] = useState(getUser)
+  const [user, setUser] = useState(getUser);
 
   return (
-      <main className='App'>
-        { 
+    <main className='App'>
+      { 
         user ?
         <>
-        {/* The placement of the navbar matters */}
-        <Navbar user = {user} setUser = {setUser}/>
-      <Routes>
-        <Route path='/orders/new' element = {<NewOrderPage/>} />
-        <Route path='/orders' element = {<OrderHistoryPage/>} />
-      </Routes>
-      </>
-      :
-      <AuthPage setUser={setUser} />
-    } 
-      </main>
-  )
+          <Navbar user={user} setUser={setUser} />
+          <Routes>
+            <Route path='/orders/new' element={<NewOrderPage />} />
+            <Route path='/orders' element={<OrderHistoryPage />} />
+            <Route path='/games' element={<GameListPage />} />
+            <Route path='/cart' element={<CartPage />} />
+          </Routes>
+        </>
+        :
+        <AuthPage setUser={setUser} />
+      } 
+    </main>
+  );
 }
 
-export default App
+export default App;

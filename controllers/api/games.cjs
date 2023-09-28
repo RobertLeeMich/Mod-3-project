@@ -18,3 +18,6 @@ const getGamesByGenre = async (req, res) => {
     }
   };
   
+  module.exports = {
+    getGamesByGenre
+  }
