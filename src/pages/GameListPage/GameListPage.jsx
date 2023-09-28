@@ -1,38 +1,78 @@
-import React, { useState, useEffect } from 'react';
-import * as gamesAPI from '../../utilities/games-api';
-import GameList from '../../components/GameList/GameList';
+import React, { useEffect, useState } from 'react';
+import { fetchGamesByGenre, fetchGenres } from '../../utilities/games-api';
 
-export default function GameListPage() {
+const GameListPage = () => {
   const [games, setGames] = useState([]);
   const [genres, setGenres] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState('action');
+  const [selectedGenre, setSelectedGenre] = useState('');
 
   useEffect(() => {
-    async function getGamesAndGenres() {
-      const fetchedGames = await gamesAPI.fetchGamesByGenre(selectedGenre);
-      const fetchedGenres = await gamesAPI.fetchGenres();
-      setGames(fetchedGames);
-      setGenres(fetchedGenres);
-    }
-    getGamesAndGenres();
-  }, [selectedGenre]);
+    const fetchData = async () => {
+      try {
+        console.log("About to fetch genres"); // Debug 1
+        const data = await fetchGenres();
+        console.log("Fetched genres: ", data.results); // Debug 2
+        setGenres(data.results);
+      } catch (err) {
+        console.error('Fetching genres failed:', err);
+      }
+    };
+    fetchData();
+  }, []);
+  
+  
 
-  const handleGenreSelect = (genre) => {
-    setSelectedGenre(genre);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (selectedGenre) {
+          const data = await fetchGamesByGenre(selectedGenre);
+          
+          // Transform games data
+          const transformedGames = data.results.map(game => {
+            const { id, name, background_image, genres, released, rating } = game;
+            return {
+              id,
+              name,
+              background_image,
+              genres: genres.map(genre => genre.name),
+              released,
+              rating
+            };
+          });
+  
+          setGames(transformedGames);
+        }
+      } catch (err) {
+        console.error('Fetching games by genre failed:', err);
+      }
+    };
+    fetchData();
+  }, [selectedGenre]);
+  
 
   return (
     <div>
-      <aside>
-        {genres.map((genre, idx) => (
-          <button key={idx} onClick={() => handleGenreSelect(genre)}>
-            {genre}
-          </button>
-        ))}
-      </aside>
-      <main>
-        <GameList games={games} />
-      </main>
+      <div>
+        <h1>Genres</h1>
+        <ul>
+  {games.map((game, idx) => (
+    <li key={idx}>
+      {game.name} - Rating: {game.rating} - Released: {game.released}
+    </li>
+  ))}
+</ul>
+      </div>
+      <div>
+        <h1>Games in {selectedGenre}</h1>
+        <ul>
+          {games.map((game, idx) => (
+            <li key={idx}>{game.name}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
-}
+};
+
+export default GameListPage;

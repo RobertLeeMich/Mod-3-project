@@ -1,8 +1,12 @@
 const getGamesByGenre = async (req, res) => {
     try {
       const genre = req.params.genre;
-      const response = await axios.get(`https://api.rawg.io/api/games?genres=${genre}&page_size=2`);
+      const API_KEY = process.env.API_KEY
+      console.log("API Key: ", API_KEY)
+      const response = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page_size=2`);
       
+      console.log(response.data);
+
       const games = response.data.results.map(game => ({
         id: game.id,
         name: game.name,

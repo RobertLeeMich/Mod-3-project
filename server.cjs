@@ -5,6 +5,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const gamesRoutes = require('./routes/api/games.cjs')
 
+
 const app = express();
 
 //Connect to DB
