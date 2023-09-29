@@ -17,3 +17,13 @@ export const fetchGenres = async () => {
     throw new Error('Failed to fetch genres');
   }
 };
+
+export const fetchAllGenres = async () => {
+    const res = await fetch(`/api/games/all-genres`);
+    if (res.ok) {
+      return res.json();
+    } else {
+      throw new Error('Failed to fetch genres');
+    }
+  };
+  
