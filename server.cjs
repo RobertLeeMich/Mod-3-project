@@ -4,6 +4,7 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const gamesRoutes = require('./routes/api/games.cjs')
+const orderRoutes = require('./routes/api/orders.cjs')
 
 
 const app = express();
@@ -18,6 +19,8 @@ app.use(logger('dev'));
 app.use(express.json());
 //middleware to pull game routes
 app.use('/api/games', gamesRoutes)
+app.use('/api/orders', orderRoutes);
+
 
 
 // Configure both serve-favicon & static middleware

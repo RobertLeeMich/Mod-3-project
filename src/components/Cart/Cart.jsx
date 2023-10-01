@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react'; 
 import CartItem from '../../components/CartItem/CartItem';
+import CheckoutModal from '../CheckoutModal/CheckoutModal';
 
-const Cart = ({ cartItems, onRemove, onIncrease, onDecrease }) => {
-  const subtotal = cartItems.reduce((acc, game) => acc + game.price, 0);
+const Cart = ({ cartItems, handleCheckout, onRemove, onIncrease, onDecrease }) => {
+  
+
+  
+  const [isCheckoutModalOpen, setCheckoutModalOpen] = useState(false); 
+  const subtotal = cartItems.reduce((acc, game) => acc + (game.price * game.quantity), 0);
+
+  const handleConfirm = () => {
+    setCheckoutModalOpen(false);
+    handleCheckout(cartItems);
+  };
 
   return (
     <div>
@@ -16,8 +26,13 @@ const Cart = ({ cartItems, onRemove, onIncrease, onDecrease }) => {
         />
       ))}
       <div>Subtotal: {subtotal.toFixed(2)}</div>
-      {/* Checkout button here */}
-      <button>Proceed to Checkout</button>
+      <button onClick={() => setCheckoutModalOpen(true)}>Proceed to Checkout</button>
+      <CheckoutModal
+        isOpen={isCheckoutModalOpen}
+        onClose={() => setCheckoutModalOpen(false)}
+        onConfirm={handleConfirm}
+        cartItems={cartItems} 
+      />
     </div>
   );
 };

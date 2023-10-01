@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { fetchGamesByGenre, fetchAllGenres } from '../../utilities/games-api';
-import Cart from '../../components/Cart/Cart'; 
 
-const GameListPage = () => {
+const GameListPage = ({ cartItems, addToCart }) => {
   const [games, setGames] = useState([]);
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState('');
-  const [cartItems, setCartItems] = useState([]); 
-  const price = 59.99
-
-  const addToCart = (game) => {
-    setCartItems(prevItems => [...prevItems, game]);
-  };
+  const price = 59.99;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,10 +59,6 @@ const GameListPage = () => {
             </li>
           ))}
         </ul>
-      </div>
-      <div style={{ marginTop: '20px' }}>
-        <h1>Your Cart</h1>
-        <Cart cartItems={cartItems} />  {/* Pass cartItems as prop */}
       </div>
     </div>
   );
