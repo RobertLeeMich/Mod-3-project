@@ -51,7 +51,7 @@ Mostly getting the API to show up, and working with CSS. With this app took me a
 Definitely learning how to troubleshoot a backend application and learning how the stack calls worked. I got to the point where I could narrow an issue pretty quickly (< 10 minutes I'd say) but it did depend on the issue. Also for console errors, I still have trouble tracking down the flow of information between files in backend to frontend, so I'll need to work on that.
 
 <p align="center">
-  <img src="favicon.png">
+  <img src="whitefavicon.png">
 </p>
 
 Credits:
