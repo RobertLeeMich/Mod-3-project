@@ -7,7 +7,7 @@ import logoImage from "../../../main2.png";
 function AuthPage(props) {
   return (
     <main className={styles.main}>
-      <img src={logoImage} alt="Logo" className={styles.mainImage} />
+      <img src={logoImage} alt="Logo" className={styles.mainimage} />
       <p className={styles.textstyle}>Sign Up:</p>
       <SignUpForm className ={styles.form} setUser={props.setUser} />
       <p className={styles.textstyle}>Log In:</p>

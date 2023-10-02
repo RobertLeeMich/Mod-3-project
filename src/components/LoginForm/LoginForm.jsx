@@ -33,9 +33,9 @@ return (
   <div>
     <div className="form-container">
       <form autoComplete="off" onSubmit={handleSubmit} >
-        <label>Email</label>
+        <label className={styles.label}>Email</label>
         <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-        <label>Password</label>
+        <label className={styles.label}> Password</label>
         <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
         <button className={styles.subButton} type="submit">LOG IN</button>
       </form>
