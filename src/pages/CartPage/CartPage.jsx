@@ -1,11 +1,11 @@
 import React from 'react';
 import Cart from '../../components/Cart/Cart';
+import styles from './CartPage.module.css'
 
 const CartPage = ({ cartItems, handleCheckout, onRemove, onIncrease, onDecrease }) => {
-  console.log(cartItems, handleCheckout, onRemove, onIncrease, onDecrease);
 
   return (
-    <div>
+    <div className={styles.cartPage}>
       <h1>Your Cart</h1>
       <Cart 
         cartItems={cartItems}

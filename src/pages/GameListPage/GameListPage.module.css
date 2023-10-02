@@ -1,48 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Offside&display=swap');
 
 .container {
-    background-color: #561E18;
-    min-height: 100vh;
-    color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .genreList {
-    flex: 1;
-    padding: 2rem;
-  }
-  
-  .genreItem {
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
-  
-  .gameList {
-    flex: 3;
-    padding: 2rem;
-  }
-  
-  .gameItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .gameImage {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .addBtn {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #FFFFFF;
-    color: #561E18;
-    border: none;
-    cursor: pointer;
-  }
-  
+  background-color: #561e18;
+  min-height: 100vh;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Iceland, sans-serif;
+  font-size: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin-top: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.genreList {
+  flex: 1;
+  padding: 2rem;
+}
+
+.genreItem {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.gameList {
+  flex: 3;
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10%;
+}
+
+.gameList h1 {
+  margin-top: 5%;
+  margin-left: 5%;
+  align-self: center;
+}
+
+.gameItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.gameImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.gameText {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.addButton {
+  background-color: #333333;
+  color: #FFFFFF;
+  border: 2px solid white;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 2rem;
+  text-align: center;
+  font-family: Iceland, sans-serif;
+}

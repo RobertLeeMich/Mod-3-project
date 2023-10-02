@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Offside&display=swap');
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -22,6 +24,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-family: Iceland, sans-serif;
+
 }
 
 .checkoutInput{

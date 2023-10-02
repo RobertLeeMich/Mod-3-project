@@ -6,9 +6,11 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 function AuthPage(props) {
   return (
     <main className={styles.main}>
-      <img className={styles.mainimage} src="main.png" alt="Fake Store Logo" />
-      <SignUpForm setUser={props.setUser} />
-      <LoginForm setUser={props.setUser} />
+      <img className={styles.mainimage} src="main2.png" alt="Fake Store Logo" />
+      <p className={styles.textstyle}>Sign Up:</p>
+      <SignUpForm className ={styles.form} setUser={props.setUser} />
+      <p className={styles.textstyle}>Log In:</p>
+      <LoginForm className = {styles.form} setUser={props.setUser} />
     </main>
   );
 }

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { checkToken, getUser } from "../../utilities/users-service.js";
 import { getOrdersByUserId, deleteOrder } from "../../utilities/orders-api.js"; 
+import styles from './OrderHistoryPage.module.css';
+
+
 
 function OrderHistoryPage() {
   const [orders, setOrders] = useState([]);
@@ -42,28 +45,29 @@ function OrderHistoryPage() {
   }
 
   return (
-    <div>
-      <h1>Order History Page</h1>
-      <button onClick={handleCheckToken}>Check Token Expiration</button>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Order History Page</h1>
+      {/* <button className={styles.button} onClick={handleCheckToken}>Check Token Expiration</button> */}
       
       {orders.length ? (
-        <ul>
+        <ul className={styles.orderList}>
           {orders.map((order, idx) => (
-            <li key={idx}>
-              <h3>Order ID: {order._id.slice(-5)} <button onClick={() => handleDeleteOrder(order._id)}>Delete Order</button></h3>
-              <ul>
+            <li key={idx} className={styles.orderItem}>
+              <h3 className={styles.subHeading}>Order ID: {order._id.slice(-5)} <button className={styles.button} onClick={() => handleDeleteOrder(order._id)}>Delete Order</button></h3>
+              <ul className={styles.itemList}>
                 {order.items.map((item, i) => (
-                  <li key={i}>
-                    <img src={item.background_image || 'default_image_url_here'} alt={item.name} width="50" /> <span>{item.name}</span>
+                  <li key={i} className={styles.item}>
+                    <img className={styles.itemImage} src={item.background_image || 'default_image_url_here'} alt={item.name} width="50" /> 
+                    <span className={styles.itemName}>{item.name}</span>
                   </li>
                 ))}
               </ul>
-              <p>Total: ${order.items.reduce((acc, item) => acc + (item.price * item.quantity || 0), 0).toFixed(2)}</p>
+              <p className={styles.total}>Total: ${order.items.reduce((acc, item) => acc + (item.price * item.quantity || 0), 0).toFixed(2)}</p>
             </li>
           ))}
         </ul>
       ) : (
-        <p>No orders found</p>
+        <p className={styles.noOrders}>No orders found</p>
       )}
     </div>
   );

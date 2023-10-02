@@ -39,10 +39,7 @@ function App() {
       console.error("An error occurred while saving the order:", error);
     }
   };
-  
 
-  
-  
   const onIncrease = (itemId) => {
     setCartItems(prevItems => 
       prevItems.map(item =>

@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Offside&display=swap');
+
 .footer {
     background-color: #333333;
     color: #FFFFFF;
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    min-width: 100%;
   }
   
   .footerText {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    font-family: Offside, sans-serif;
   }
   
   .footerLogo {
@@ -20,7 +24,7 @@
   }
   
   .logoImage {
-    width: 245px;
+    width: 300px;
     height: auto;
   }
   

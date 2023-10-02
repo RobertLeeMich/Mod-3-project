@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Offside&display=swap');
+
+
+.cartPage{
+    background-color: #4F221B;
+    color: #FFFFFF;
+    font-family: Iceland, sans-serif;
+    font-size: 2rem;
+}
