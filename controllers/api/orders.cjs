@@ -19,9 +19,18 @@ async function create(req, res) {
     }
   }
   
+  async function remove(req, res) {
+    try {
+      const deletedOrder = await Order.findByIdAndDelete(req.params.orderId);
+      res.status(200).json(deletedOrder);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  }
   
 
 module.exports = {
   create,
   index,
+  remove,
 };

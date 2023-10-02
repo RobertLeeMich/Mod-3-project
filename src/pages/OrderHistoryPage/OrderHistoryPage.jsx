@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { checkToken, getUser } from "../../utilities/users-service.js";
-import { getOrdersByUserId } from "../../utilities/orders-api.js"; 
+import { getOrdersByUserId, deleteOrder } from "../../utilities/orders-api.js"; 
 
 function OrderHistoryPage() {
   const [orders, setOrders] = useState([]);
@@ -32,6 +32,15 @@ function OrderHistoryPage() {
     }
   };
 
+  async function handleDeleteOrder(orderId) {
+    try {
+      await deleteOrder(orderId);
+      setOrders(orders.filter(order => order._id !== orderId));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div>
       <h1>Order History Page</h1>
@@ -41,7 +50,7 @@ function OrderHistoryPage() {
         <ul>
           {orders.map((order, idx) => (
             <li key={idx}>
-              <h3>Order ID: {order._id.slice(-5)}</h3>
+              <h3>Order ID: {order._id.slice(-5)} <button onClick={() => handleDeleteOrder(order._id)}>Delete Order</button></h3>
               <ul>
                 {order.items.map((item, i) => (
                   <li key={i}>
@@ -49,7 +58,6 @@ function OrderHistoryPage() {
                   </li>
                 ))}
               </ul>
-              {console.log('Order Items:', order.items)}
               <p>Total: ${order.items.reduce((acc, item) => acc + (item.price * item.quantity || 0), 0).toFixed(2)}</p>
             </li>
           ))}

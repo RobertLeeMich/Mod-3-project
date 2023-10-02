@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.container {
+    background-color: #561E18;
+    min-height: 100vh;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .genreList {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .genreItem {
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .gameList {
+    flex: 3;
+    padding: 2rem;
+  }
+  
+  .gameItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .gameImage {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .addBtn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #FFFFFF;
+    color: #561E18;
+    border: none;
+    cursor: pointer;
+  }
+  

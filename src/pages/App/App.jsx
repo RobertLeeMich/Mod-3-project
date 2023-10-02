@@ -8,6 +8,8 @@ import GameListPage from '../../pages/GameListPage/GameListPage';
 import CartPage from '../../pages/CartPage/CartPage';
 import { getUser } from '../../utilities/users-service';
 import { createOrder } from '../../utilities/orders-api';
+import Footer from '../../components/Footer/Footer.jsx';
+
 
 
 function App() {
@@ -65,7 +67,7 @@ function App() {
       { 
         user ?
         <>
-          <Navbar user={user} setUser={setUser} />
+          <Navbar user={user} setUser={setUser} getUser={getUser}/>
           <Routes>
             <Route path='/orders/new' element={<NewOrderPage />} />
             <Route path='/orders' element={<OrderHistoryPage />} />
@@ -76,7 +78,8 @@ function App() {
         </>
         :
         <AuthPage setUser={setUser} />
-      } 
+      }
+            <Footer />
     </main>
   );
 }
