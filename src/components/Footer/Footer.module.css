@@ -24,7 +24,6 @@
     height: auto;
   }
   
-  /* Responsive adjustments */
   @media (max-width: 768px) {
     .footerText {
       flex-direction: column;
