@@ -48,7 +48,7 @@ As always with React-Router, navigation between these pages is seamless, and spe
 Mostly getting the API to show up, and working with CSS. With this app took me a lot of time since I wanted it to be at least moderately responsively-designed. I also ran into an issue with having the Cart.jsx show up on the same page as the GameListPage.jsx, because the props wouldn't pass properly for game information. So I just moved the cart to its own page, and everything worked off the bat, so I just left it that way.
 
 ### What are my biggest takeaways from this project?
-Definitely learning how to troubleshoot a backend application and learning how the stack calls worked. I got to the point where I could narrow an issue pretty quickly (< 10 minutes I'd say) but it did depend on the issue. Also for console errors, I still have trouble tracking down the flow of information between files in backend to frontend, so I'll need to work on that.
+Definitely learning how to troubleshoot a backend application and learning how the stack calls worked. I got to the point where I could narrow an issue pretty quickly (< 10 minutes I'd say) but it did depend on the issue. Also for console errors, I've greatly improved over time, and this project was a test of my abilities for sure.
 
 <p align="center">
   <img src="whitefavicon.png">
