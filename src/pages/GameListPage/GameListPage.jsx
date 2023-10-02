@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchGamesByGenre, fetchAllGenres } from "../../utilities/games-api";
 import styles from "./GameListPage.module.css";
+import logoImage from "../../../main2.png";
 
 const capitalize = (str) => {
   return str
@@ -45,7 +46,7 @@ const GameListPage = ({ cartItems, addToCart }) => {
 
   return (
     <div className={styles.container}>
-      <img className={styles.header} src = 'main2.png' />
+      <img src={logoImage} alt="Logo" className={styles.header} />
       <div className={styles.content}>
         <div className={styles.genreList}>
           <h1>Genres</h1>
