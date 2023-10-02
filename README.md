@@ -25,7 +25,7 @@
 order.cjs, a schema for orders, I feel like it's a very solid schema, after I wrote it I didn't have problems with it, I only had to add to it.
 
 ### Favorite Express Controller Method: 
-The Create method I have in /controllers/api/orders.cjs, just because when I got it working, I knew I was on my way to finishing the project on time.
+The Create method I have in /controllers/api/orders.cjs, just because when I got it working, it was a good feeling.
 
 ### Favorite React Component: 
 I spent so much time in GameListPage.jsx that it's definitely my favorite, but I like Navbar.jsx too.
