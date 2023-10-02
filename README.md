@@ -1,6 +1,6 @@
-<div style='text-align:center'>
-<img src = './main2.png'>
-</div>
+<p align="center">
+  <img src="main2.png">
+</p>
 
 # Engame
 
@@ -17,9 +17,9 @@
     - Order History accurately displays orders using last 5 characters of Order IDs for easy tracking
     - Cart accurately tracks items & totals
     - Username is displayed in the navbar to show user is logged in correctly
-<div style='text-align:center'>
-<img src = './main.png' width = 400>
-</div>
+<p align="center">
+  <img width = '400' height = '275' src="main.png">
+</p>
 
 ## Code Discussion
 
@@ -32,9 +32,9 @@ The Create method I have in /controllers/api/orders.cjs, just because when I got
 ### Favorite React Component: 
 I spent so much time in GameListPage.jsx that it's definitely my favorite, but I like Navbar.jsx too.
 
-<div style='text-align:center'>
-<img src = './main3.png' width = 400>
-</div>
+<p align="center">
+  <img width='400' height = '275' src="main3.png">
+</p>
 
 ### Client-Side Routing:
     /games - New Order route, lists API returns for genres and when you click a genre, displays a couple games for that genre
@@ -50,9 +50,9 @@ Mostly getting the API to show up, and working with CSS. With this app took me a
 ### What are my biggest takeaways from this project?
 Definitely learning how to troubleshoot a backend application and learning how the stack calls worked. I got to the point where I could narrow an issue pretty quickly (< 10 minutes I'd say) but it did depend on the issue. Also for console errors, I still have trouble tracking down the flow of information between files in backend to frontend, so I'll need to work on that.
 
-<div style='text-align:center'>
-<img src = './favicon.png' width = 100>
-</div>
+<p align="center">
+  <img src="favicon.png">
+</p>
 
 Credits:
 Robert Michaud, Creator of the Engame© website
