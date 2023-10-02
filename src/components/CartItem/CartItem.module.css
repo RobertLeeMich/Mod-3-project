@@ -1,61 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Offside&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Iceland&family=Offside&display=swap");
 
 .cartContainer {
-    padding: 1rem;
-    background-color: #4F221B;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    color: #FFFFFF;
-    font-family: Iceland, sans-serif;
-    font-size: 2rem;
+  padding: 1rem;
+  background-color: #4f221b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: Iceland, sans-serif;
+  font-size: 2rem;
+}
 
-  }
-  
-  .cartSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .subtotal {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    font-weight: bold;
-    text-align: center;
-  }
+.cartSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
-.remove{
+.subtotal {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.remove {
   padding: 10px;
   margin-right: 5%;
   background-color: #333333;
-  color: #FFFFFF;
+  color: #ffffff;
   border: 2px solid white;
+  font-family: Iceland, sans-serif;
+  font-size: 1.5rem;
 }
 
-.remove:hover{
-  background-color: #4F221B;
+.remove:hover {
+  color: black;
+  background-color: #ffffff;
 }
 
-  .incdec{
+.remove:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.increase {
   background-color: #333333;
-  color: #FFFFFF;
-  padding: 1%;
+  color: #ffffff;
   border: 2px solid white;
+  border-radius: 10%;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
-  margin-top: 1rem;
-  }
+  font-family: Iceland, sans-serif;
+}
 
-  .incdec:hover{
-    background-color: #4F221B;
-  }
+.increase:hover {
+  color: black;
+  background-color: #ffffff;
+}
 
-  .cartItemImage {
-    max-width: 700px;
-    height: auto;
-  }
-  
+.increase:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.decrease {
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid white;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 2rem;
+  text-align: center;
+  font-family: Iceland, sans-serif;
+}
+
+.decrease:hover {
+  color: black;
+  background-color: #ffffff;
+}
+
+.decrease:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.cartItemImage {
+  max-width: 700px;
+  height: auto;
+}

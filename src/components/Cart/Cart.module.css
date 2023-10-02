@@ -54,7 +54,13 @@ h1 {
 }
 
 .checkoutButton:hover{
-  background-color: #4F221B;
+  color: black;
+  background-color: #ffffff;
+}
+
+.checkoutButton:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .cartItemImage {

@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&family=Offside&display=swap');
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 1rem;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.username {
+  font-size: 2rem; 
+  color: white; 
+  font-family: Offside, sans-serif;
+  font-weight: bold;
+}
   
   .logoutButton {
     font-size: 1rem;
@@ -17,6 +24,7 @@
     cursor: pointer;
     font-family: Offside, sans-serif;
     font-size: 2rem;
+    font-weight: bold;
   }
   
   .navList {
@@ -34,7 +42,6 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
     font-family: Offside, sans-serif;
     font-size: 2rem;
   }

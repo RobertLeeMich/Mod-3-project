@@ -47,7 +47,6 @@ export function getUser() {
     const token = getToken() //either returns the token if exists and valid, or returns null
     //This is the same code as above for the atob, just in a ternary
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
-
 }
 
 export function logOut() {

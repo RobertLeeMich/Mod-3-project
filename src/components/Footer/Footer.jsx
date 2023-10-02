@@ -21,8 +21,8 @@ const Footer = () => {
                 </p>
                 <p>
                     Fonts:{" "}
-                    <a className={styles["glink"]} href="http://google.com">
-                        http://google.com
+                    <a className={styles["glink"]} href="http://fonts.google.com">
+                    https://fonts.google.com/
                     </a>
                 </p>
             </div>

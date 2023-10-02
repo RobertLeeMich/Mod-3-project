@@ -53,7 +53,8 @@ function OrderHistoryPage() {
         <ul className={styles.orderList}>
           {orders.map((order, idx) => (
             <li key={idx} className={styles.orderItem}>
-              <h3 className={styles.subHeading}>Order ID: {order._id.slice(-5)} <button className={styles.button} onClick={() => handleDeleteOrder(order._id)}>Delete Order</button></h3>
+              <h3 className={styles.subHeading}>Order ID: {order._id.slice(-5)} 
+              <button className={styles.deleteOrder} onClick={() => handleDeleteOrder(order._id)}>Delete Order</button></h3>
               <ul className={styles.itemList}>
                 {order.items.map((item, i) => (
                   <li key={i} className={styles.item}>

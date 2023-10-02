@@ -10,9 +10,9 @@ const CartItem = ({ game, onRemove, onIncrease, onDecrease }) => {
       <p>Rating: {game.rating}</p>
       <button className={styles.remove} onClick={() => onRemove(game.id)}>Remove</button>
       <span className={styles.quantity}>Quantity of Game:</span> {' '}
-      <button className={styles.incdec} onClick={() => onDecrease(game.id)}>-</button>{' '}
+      <button className={styles.decrease} onClick={() => onDecrease(game.id)}>-</button>{' '}
       <span>{game.quantity}</span>
-      {' '}<button className={styles.incdec} onClick={() => onIncrease(game.id)}>+</button>
+      {' '}<button className={styles.increase} onClick={() => onIncrease(game.id)}>+</button>
     </div>
   );
 };

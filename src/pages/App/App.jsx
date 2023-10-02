@@ -13,7 +13,7 @@ import Footer from '../../components/Footer/Footer.jsx';
 
 
 function App() {
-  const [user, setUser] = useState(getUser);
+  const [user, setUser] = useState(getUser());
   const [cartItems, setCartItems] = useState([]);
   const [orderHistory, setOrderHistory] = useState([]);
 

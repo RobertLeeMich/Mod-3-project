@@ -69,7 +69,7 @@ const CheckoutModal = ({ isOpen, onClose, onConfirm, cartItems }) => {
         >
           Confirm
         </button>
-        <button onClick={onClose}>Cancel</button>
+        <button className={styles.cancel} onClick={onClose}>Cancel</button>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const CartPage = ({ cartItems, handleCheckout, onRemove, onIncrease, onDecrease 
 
   return (
     <div className={styles.cartPage}>
-      <h1>Your Cart</h1>
+      <h1 className={styles.header}>Your Cart</h1>
       <Cart 
         cartItems={cartItems}
         handleCheckout={handleCheckout}

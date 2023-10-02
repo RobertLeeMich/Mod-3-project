@@ -33,9 +33,52 @@
 }
 
 .confirm-enabled {
-  background-color: orange;
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid white;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 2rem;
+  text-align: center;
+  font-family: Iceland, sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.confirm-enabled:hover{
+  color: black;
+    background-color: #ffffff;
+}
+
+.confirm-enabled:active{
+  box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .confirm-disabled {
   background-color: gray;
 }
+
+.cancel{
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid white;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 2rem;
+  text-align: center;
+  font-family: Iceland, sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cancel:hover{
+  color: black;
+  background-color: #ffffff;
+}
+
+.cancel:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
