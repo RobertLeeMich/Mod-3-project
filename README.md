@@ -6,7 +6,8 @@
 
 ## A demo of a video game ecommerce website, built using React, Express, Mongoose, MongoDB, and JavaScript.
 
-# Link:
+# Link to App:
+# Link to Trello: https://trello.com/b/SHFIVr2J/mod-3-project
 
 ### Main features of the app:
     - User Login/Logout
