@@ -10,7 +10,7 @@
 # Link to Trello: https://trello.com/b/SHFIVr2J/mod-3-project
 # Link to Wireframe: https://app.diagrams.net/#HRobertLeeMich%2FMod-3-project%2Fmain%2FUntitled%20Diagram.drawio 
 
-### Main features of the app:
+## Main features of the app:
     - User Login/Logout
     - JWT based authentication system for users
     - API Calls from RAWG Video Game API database
