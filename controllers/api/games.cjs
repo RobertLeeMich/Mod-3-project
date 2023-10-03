@@ -1,3 +1,5 @@
+//controller for games
+
 const getGamesByGenre = async (req, res) => {
     try {
       const genre = req.params.genre;

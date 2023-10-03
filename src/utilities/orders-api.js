@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+//functions to delete, create, etc
 export const createOrder = async (orderData) => {
   const res = await axios.post('/api/orders', orderData);
   return res.data;

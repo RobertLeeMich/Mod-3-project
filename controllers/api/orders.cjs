@@ -1,5 +1,7 @@
 const Order = require('../../models/order.cjs');
 
+
+//controller for orders, this block was the first I got working overall
 async function create(req, res) {
   try {
     const newOrder = new Order(req.body);
@@ -10,6 +12,7 @@ async function create(req, res) {
   }
 }
 
+//index function
   async function index(req, res) {
     try {
       const orders = await Order.find({ userId: req.params.userId });
@@ -19,6 +22,7 @@ async function create(req, res) {
     }
   }
   
+  //remove/delete function
   async function remove(req, res) {
     try {
       const deletedOrder = await Order.findByIdAndDelete(req.params.orderId);

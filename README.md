@@ -11,12 +11,13 @@
 ### Link to Wireframe (Just in case): https://app.diagrams.net/#HRobertLeeMich%2FMod-3-project%2Fmain%2FUntitled%20Diagram.drawio 
 
 ## Main features of the app:
-    - User Login/Logout
-    - JWT based authentication system for users
-    - API Calls from RAWG Video Game API database
-    - Order History accurately displays orders using last 5 characters of Order IDs for easy tracking
-    - Cart accurately tracks items & totals
-    - Username is displayed in the navbar to show user is logged in correctly
+  - Full CRUD (Create, Read, Update, Delete) functionality
+  - User Login/Logout
+  - JWT based authentication system for users
+  - API Calls from RAWG Video Game API database
+  - Order History accurately displays orders using last 5 characters of Order IDs
+  - Cart accurately tracks items & totals
+  - Username is displayed in the navbar to show user is logged in correctly
 <p align="center">
   <img width = '400' height = '275' src="main.png">
 </p>

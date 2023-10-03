@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+//routes to pull API data
 export const fetchGamesByGenre = async (genre) => {
   try {
     const response = await axios.get(`/api/games/genre/${genre}`);
